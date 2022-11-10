@@ -1,0 +1,4 @@
+*.egg-info/
+
+# Virtual Python Envrionment
+.venv/
