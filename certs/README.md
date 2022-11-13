@@ -1,0 +1,1 @@
+Get Certificates for the device from the [AWS IoT Console](console.aws.amazon.com/iot/home).

@@ -2,3 +2,9 @@
 
 # Virtual Python Envrionment
 .venv/
+
+# Exclude Certificates and Keys
+*.pem
+*.key
+*.crt
+*.cert
