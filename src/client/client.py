@@ -66,10 +66,6 @@ class Client():
             self.logger.exception(f"{type(self).__name__} - Failed to process raw message!")
 
     def process_raw_message(self, msg):
-        """
-        This function handles raw data from the smart meter.
-        It tries to decrypt, extract and store the relevant information in our database.
-        """
         print(msg)
 
 
