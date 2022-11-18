@@ -1,0 +1,1 @@
+Request certificates for the client with permissions to subscribe to desired topic

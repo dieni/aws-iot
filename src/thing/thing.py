@@ -8,12 +8,12 @@ import json
 
 # Define ENDPOINT, CLIENT_ID, PATH_TO_CERTIFICATE, PATH_TO_PRIVATE_KEY, PATH_TO_AMAZON_ROOT_CA_1, MESSAGE, TOPIC, and RANGE
 ENDPOINT = "ac40od4fxn5tc-ats.iot.eu-central-1.amazonaws.com"
-CLIENT_ID = "TestThingii"
-PATH_TO_CERTIFICATE = "src/thing/certs/87dd0b44fc798fab87e0fb41ba80158b3b5433db8583e795c95213d79556e2af-certificate.pem.crt"
-PATH_TO_PRIVATE_KEY = "src/thing/certs/87dd0b44fc798fab87e0fb41ba80158b3b5433db8583e795c95213d79556e2af-private.pem.key"
-PATH_TO_AMAZON_ROOT_CA_1 = "src/thing/certs/AmazonRootCA1.pem"
+CLIENT_ID = "TestThing"
+PATH_TO_CERTIFICATE = "src/thing/certs/DevelopmentThing/93523796c35ae6f042318e1d6ca9a1f088c71a5a83d5479c17ede2d668911b9f-certificate.pem.crt"
+PATH_TO_PRIVATE_KEY = "src/thing/certs/DevelopmentThing/93523796c35ae6f042318e1d6ca9a1f088c71a5a83d5479c17ede2d668911b9f-private.pem.key"
+PATH_TO_AMAZON_ROOT_CA_1 = "src/thing/certs/DevelopmentThing/AmazonRootCA1.pem"
 MESSAGE = "Hello World"
-TOPIC = "test/testing"
+TOPIC = "test"
 RANGE = 20
 
 # Spin up resources
@@ -43,7 +43,7 @@ for i in range (RANGE):
     data = "{} [{}]".format(MESSAGE, i+1)
     message = {"message" : data}
     mqtt_connection.publish(topic=TOPIC, payload=json.dumps(message), qos=mqtt.QoS.AT_LEAST_ONCE)
-    print("Published: '" + json.dumps(message) + "' to the topic: " + "'test/testing'")
+    print("Published: '" + json.dumps(message) + "' to the topic: " + f"{TOPIC}")
     t.sleep(0.1)
 print('Publish End')
 disconnect_future = mqtt_connection.disconnect()

@@ -3,6 +3,7 @@ from distutils.core import setup
 
 install_requires = [
     "awsiotsdk",
+    "paho-mqtt"
 ]
 
 setup(
