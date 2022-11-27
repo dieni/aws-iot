@@ -3,7 +3,8 @@ from distutils.core import setup
 
 install_requires = [
     "awsiotsdk",
-    "paho-mqtt"
+    "paho-mqtt",
+    "planetmint-ipld",
 ]
 
 setup(
